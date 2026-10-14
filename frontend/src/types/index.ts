@@ -1,0 +1,5 @@
+export interface TouristPlace {id:number;name:string;city:string;category:string;address:string;latitude:number;longitude:number;description:string;opening_time:string;closing_time:string;average_stay_minutes:number;source:string}
+export interface Congestion {place_id:number;place_name:string;current:{score:number;level:string};forecast:{hour:number;score:number}[];source:string}
+export interface TravelRequest {title?:string;travel_date:string;start_location:string;start_time:string;end_time:string;cities:string[];preferences:string[];avoid_congestion:boolean;transportation:'public'|'car';walking_preference?:'low'|'normal'|'high';must_visit:string[];excluded_places:string[]}
+export interface RouteStop {order:number;place_id:number;place:string;latitude:number;longitude:number;arrival_time:string;departure_time:string;stay_minutes:number;travel_minutes:number;congestion_score:number;reason:string}
+export interface Recommendation {title?:string;plan_id?:string|null;travel_date:string;summary:string;route:RouteStop[];warnings:string[];source:string}

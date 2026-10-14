@@ -1,0 +1,1 @@
+export default function CongestionBadge({score}:{score:number}) {const level=score<=25?'여유':score<=50?'보통':score<=75?'혼잡':'매우 혼잡';return <span className={`badge level-${Math.min(3,Math.max(0,Math.ceil(score/25)-1))}`}>{level} · {score}</span>;}
